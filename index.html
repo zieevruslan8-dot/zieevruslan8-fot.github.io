@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска объявлений с фото</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Доска объявлений с фото</h1>
+            <p>Покажите товар во всей красе!</p>
+        </header>
+
+        <div class="ad-form">
+            <h2>📝 Добавить объявление</h2>
+            <input type="text" id="ad-title" placeholder="Заголовок объявления" required>
+            <textarea id="ad-text" placeholder="Подробное описание" required></textarea>
+            <input type="text" id="ad-price" placeholder="Цена в рублях">
+            <input type="text" id="ad-contact" placeholder="Ваши контакты">
+            
+            <div class="photo-upload">
+                <h3>📷 Добавить фото</h3>
+                <input type="file" id="ad-photo" accept="image/*" multiple>
+                <div id="photo-preview" class="photo-preview"></div>
+                <small>Можно выбрать несколько фото</small>
+            </div>
+
+            <button onclick="addAd()">📤 Опубликовать объявление</button>
+        </div>
+
+        <div class="ads-list">
+            <h2>📋 Все объявления</h2>
+            <div id="ads-container">
+                <!-- Объявления будут здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+              </html>
