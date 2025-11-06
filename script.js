@@ -1,4 +1,13 @@
-// Supabase клиент
+// Экстренная проверка инициализации
+if (typeof supabase === 'undefined') {
+    // Переинициализируем Supabase
+    const { createClient } = supabase;
+    window.supabase = createClient(
+        'https://ваш-project.supabase.co',
+        'ваш-public-key'
+    );
+    console.log('Supabase переинициализирован');
+}// Supabase клиент
 const supabaseUrl = 'https://nbkwwikpknothvmmfnkj.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ia3Z3aWtwa25vdGh2bW1mbmtqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI0MjIwMjYsImV4cCI6MjA3Nzk5ODAyNn0.B8yh-oBFidrCUAJOnarCSeqxQ83nZpOMeboCcXa5g70';
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
